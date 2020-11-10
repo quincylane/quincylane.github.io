@@ -6,6 +6,59 @@
 
  // SECTION 1: Variable Initialization
 
+var wild_names = ["Jenna", "Hannah", "Owen", "Matthew", "Olivia", "Anna", "Ryan", "Angela", "Finn", "Haven", "Lil Kody"];
+
+
+var boss_names = ["Ms. Patty", "The Post Star", "Snowplow Driver", "Mr. Varney", "Mr. Margison", "Mystery House"];
+
+var pokemon_data = {
+'Jenna' : {image : "static/jenna.png", move1 : "Tesla Tackle", move2 : "Bong Blast", move3: "Snow Hair Slap", move4 : "Billie Burst", evolution : "Maddie"},
+'Maddie' : {image : "static/maddie.png", move1 : "Cannon6D Flash", move2 : "Bee Stingers", move3: "Lightning Booty", move4 : "Kody Kick", evolution : -1},
+
+'Hannah' : {image : "static/hannah.png", move1 : "LAX Leap", move2 : "Hadlock Pound", move3: "Volun-tear You Apart", move4 : "Aerial Angel", evolution : "Colton"},
+'Colton' : {image : "static/colton.png", move1 : "Gentle Fist", move2 : "Trusty Lassoo", move3: "Waterbend Whip", move4 : "Aerial Angel", evolution : -1},
+
+'Owen' : {image : "static/owen.png", move1 : "Lick", move2 : "Flick", move3: "Dick Out", move4 : "Toy Chuck", evolution : "Allie"},
+'Allie' : {image : "static/allie.png", move1 : "Screech", move2 : "Evil Giggle", move3: "Scratch", move4 : "Satanic Posession", evolution : -1},
+
+'Matthew' : {image : "static/matthew.png", move1 : "Splash", move2 : "Scratch", move3: "Tear Up", move4 : "Patty Pounce", evolution : "William"},
+'William' : {image : "static/william.png", move1 : "Flail", move2 : "Stick Poke", move3: "Cry", move4 : "Patty Pound", evolution : -1},
+
+'Olivia' : {image : "static/olivia.png", move1 : "Kopnięcie", move2 : "Polish Pinch", move3: "Basketball Bounce", move4 : "Aldona Avalanche", evolution : "Julia"},
+'Julia' : {image : "static/julia.png", move1 : "Stempel", move2 : "Polish Punch", move3: "Connor Karate Chop", move4 : "Nugget Chuck", evolution : -1},
+
+'Anna' : {image : "static/anna.png", move1 : "Speedy Sprint", move2 : "Selfie Slap", move3: "Anna Ambush", move4 : "Macy Mash", evolution : "Leah"},
+'Leah' : {image : "static/leah.png", move1 : "Bite", move2 : "Queer Quake", move3: "Pastel Pow", move4 : "Maya Mangle", evolution : "Schwetty"},
+'Schwetty' : {image : "static/schwetty.png", move1 : "Dark Alchemy", move2 : "64 Palms", move3: "Bloodbend", move4 : "Flyin Ryan", evolution : -1},
+
+'Ryan' : {image : "static/ryan.png", move1 : "Sokol Shuffle", move2 : "Sharingan", move3: "Ryan Ram", move4 : "Dak Attack", evolution : "Kyle"},
+'Kyle' : {image : "static/kyle.png", move1 : "Tackett Tackle", move2 : "Divine Punishment", move3: "Boom Roasted", move4 : "Avatar State", evolution : "Holly"},
+'Holly' : {image : "static/holly.png", move1 : "Tatoosh Whoosh", move2 : "Pharma-Flip", move3: "Hollylujah", move4 : "Momaire Mash", evolution : -1},
+
+'Angela' : {image : "static/angela.png", move1 : "Troisi Tickle", move2 : "Kathy Kick", move3: "Angelunge", move4 : "Bella Blitz", evolution : "Chris"},
+'Chris' : {image : "static/chris.png", move1 : "Troisi Tackle", move2 : "Waterski Slash", move3: "Nipple Twist", move4 : "Bella Barrage", evolution : "Anthony"},
+'Anthony' : {image : "static/anthony.png", move1 : "Troisi Triumph", move2 : "Airsoft Assault", move3: "Bong Blast", move4 : "Bella Bombardment", evolution : -1},
+
+'Finn' : {image : "static/finn.png", move1 : "Lazlo Leap", move2 : "Corner Shot", move3: "Finn Flip", move4 : "Irish Jig", evolution : "Jude"},
+'Jude' : {image : "static/jude.png", move1 : "Lazlo Lunge", move2 : "Producer Pow", move3: "Jude Jab", move4 : "Dragon Summon", evolution : "Aidan"},
+'Aidan' : {image : "static/aidan.png", move1 : "Lazlo Lash", move2 : "Flex Gains", move3: "Aidan Assault", move4 : "Startup Slam", evolution : -1},
+
+'Haven' : {image : "static/haven.png", move1 : "Splash", move2 : "Fake Tears", move3: "Scratch", move4 : "Chainsaw Massacre", evolution : "Jack"},
+'Jack' : {image : "static/jack.png", move1 : "Flail", move2 : "Fake Tears", move3: "Nerf Gun", move4 : "Jack Attack", evolution : "Aidan"},
+'Cole' : {image : "static/cole.png", move1 : "Tackle", move2 : "Scratch", move3: "Ripstick Ram", move4 : "Alpaca Punch", evolution : -1},
+
+'Lil Kody' : {image : "static/lilkody.png", move1 : "Head Tilt", move2 : "Grr", move3: "Woof", move4 : "WOOF", evolution : "Kody"},
+'Kody' : {image : "static/kody.png", move1 : "Snout Push", move2 : "Tennis Ball Tear", move3: "Kody Krush", move4 : "DEFEND CHAD", evolution : -1},
+
+'Ms. Patty' : {image : "static/patty.png", move1 : "Patty Pounce", move2 : "Patty Pounce", move3: "LeapFrog Lunge", move4 : "LeapFrog Lunge", evolution : -1},
+'The Post Star' : {image : "static/poststar.png", move1 : "Public Shame", move2 : "Public Shame", move3: "Stone Throw", move4 : "Stone Throw", evolution : -1},
+'Mr. Margison' : {image : "static/margison.png", move1 : "Call 911", move2 : "Call 911", move3: "Sue Association", move4 : "Sue Association", evolution : -1},
+'Mystery House' : {image : "static/monster.png", move1 : "Demonic Curse", move2 : "Demonic Curse", move3: "Blood Sacrifice", move4 : "Blood Sacrifice", evolution : -1},
+'Mr. Varney' : {image : "static/varney.png", move1 : "Ding Dong Dash", move2 : "Ding Dong Dash", move3: "Femur SMASH", move4 : "Femur SMASH", evolution : -1},
+'Snowplow Driver' : {image : "static/snowplow.png", move1 : "Run Over", move2 : "Run Over", move3: "Avalanche", move4 : "Avalanche", evolution : -1},
+
+};
+
 class Pokemon {
   constructor(name, image_name, move1, move2, move3, move4, evolution, hp) {    
     this.name = name;
@@ -87,68 +140,17 @@ class Pokemon {
 
 var in_battle = false;
 
-var pokemon_names = ['Jenna', 'Maddie', 'Hannah', 'Colton', 'Olivia', 'Julia', 'Anna', 'Leah', 'Schwetty', 'Ryan', 'Kyle', 'Holly', 'Angela', 'Chris', 'Anthony', 
-                    'Finn', 'Jude', 'Aidan','Allie','Owen','William', 'Matthew','Haven','Jack', 'Cole', 'Ms. Patty', 'Mystery House Vampire']
-
-var wild_names = ["Jenna", "Hannah", "Owen", "Matthew", "Olivia", "Anna", "Ryan", "Angela", "Finn", "Haven", "Ms. Patty", "Lil Kody"];
-
-
 var last_stroke = -1;
 
 var current_pokemon = 0;
 
-var party = [];
-
-var pokemon_data = {
-'Jenna' : {image : "static/jenna.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Maddie"},
-'Maddie' : {image : "static/maddie.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Hannah' : {image : "static/hannah.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Colton"},
-'Colton' : {image : "static/colton.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Owen' : {image : "static/owen.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Allie"},
-'Allie' : {image : "static/allie.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Matthew' : {image : "static/matthew.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "William"},
-'William' : {image : "static/william.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Olivia' : {image : "static/olivia.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Julia"},
-'Julia' : {image : "static/julia.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Anna' : {image : "static/anna.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Leah"},
-'Leah' : {image : "static/leah.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Schwetty"},
-'Schwetty' : {image : "static/schwetty.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Ryan' : {image : "static/ryan.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Kyle"},
-'Kyle' : {image : "static/kyle.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Holly"},
-'Holly' : {image : "static/holly.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Angela' : {image : "static/angela.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Chris"},
-'Chris' : {image : "static/chris.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Anthony"},
-'Anthony' : {image : "static/anthony.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Finn' : {image : "static/finn.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Jude"},
-'Jude' : {image : "static/jude.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Aidan"},
-'Aidan' : {image : "static/aidan.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Haven' : {image : "static/haven.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Jack"},
-'Jack' : {image : "static/jack.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Aidan"},
-'Cole' : {image : "static/cole.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Ms. Patty' : {image : "static/patty.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Mystery House Vampire' : {image : "static/vampire.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-'Lil Kody' : {image : "static/lilkody.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : "Kody"},
-'Kody' : {image : "static/kody.png", move1 : "Water", move2 : "Earth", move3: "Fire", move4 : "Air", evolution : -1},
-
-};
 
 var text_case = "welcome";
 
 var caught = [];
 var working = false;
-
+var champion_battle = -1;
+var champion_current = -1;
 
 window.onload = function() {
   'use strict';
@@ -208,6 +210,9 @@ window.onload = function() {
   var pokeballImage = new Image();
   pokeballImage.src = 'static/pokeball.png';
 
+  //pokeball-selection
+  var winnerAudio = new Audio('static/winner.mp3');
+  winnerAudio.volume = 0.8;
 
   /**
    * It will hold all the pockeball data like x and y axis position
@@ -573,30 +578,67 @@ function battle() {
           break;
         case "move":
 
-          ctx.fillText(`${caught[current_pokemon].name} used ${move}! The wild ${wild_pokemon.who.name} lost ${your_strength} HP!`, 20, h - 100);
-          ctx.fillText(`The wild ${wild_pokemon.who.name} used ${opponent_move}! ${caught[current_pokemon].name} lost ${opponent_strength} HP!`, 20, h - 65);
+          ctx.fillText(`${caught[current_pokemon].name} used ${move}!`, 20, h - 100);
+          ctx.fillText(`${wild_pokemon.who.name} lost ${your_strength} HP!`, 20, h - 75);
+          ctx.fillText(`${wild_pokemon.who.name} used ${opponent_move}!`, 20, h - 50);
+          ctx.fillText(`${caught[current_pokemon].name} lost ${opponent_strength} HP!`, 20, h - 25);
 
           if (last_stroke == 13) {
 
               last_stroke = -1;
+
               if (wild_pokemon.who.hp <= 0) {
-                battle_text = "faint";
+                if (champion_current != -1 && champion_current < 5) {
+                  champion_current += 1;
+                  let poke = pokemon_data[boss_names[champion_current]];
+                  let new_pokemon = new Pokemon(boss_names[champion_current], poke["image"], poke["move1"], poke["move2"], poke["move3"], poke["move4"], poke["evolution"], 100);
+                  old_name = wild_pokemon.who.name;
+                  wild_pokemon.who = new_pokemon;
+                  battle_text = "next_opponent";
+
+                } else if (champion_current >= 5) {
+                    battle_text = "champion_beaten";
+                } else {
+                    battle_text = "faint";
+                }
                   if (caught[current_pokemon].exp < 3) {
                     caught[current_pokemon].exp += 1;
                   }
               } else if (caught[current_pokemon].hp <= 0) {
-                battle_text = "loose";
+                if (champion_battle > 0) {
+                    battle_text = "next";
+                    last_stroke = -1;
+                } else {
+                    battle_text = "lose";
+                }
               } else {
                 battle_text = "choose";
               }
             
           }
           break;
-        case "faint":
-          ctx.fillText(`The wild ${wild_pokemon.who.name} fainted!`, 20, h - 100);
-           ctx.fillText(`${caught[current_pokemon].name} gained 1 experience point!`, 20, h - 65);
 
-          
+
+        case "next_opponent":
+          ctx.fillText(`${old_name} fainted!`, 20, h - 100);
+          ctx.fillText(`The Champion sent out ${wild_pokemon.who.name}!`, 20, h - 75);
+          if (last_stroke == 13) {
+            last_stroke = -1;
+            battle_text = "choose";
+          }
+          break;
+
+        case "champion_beaten":
+          ctx.fillText(`${wild_pokemon.who.name} fainted! You defeated the Champion!`, 20, h - 100);
+          if (last_stroke == 13) {
+            last_stroke = -1;
+            battle_text = "battle_done";
+          }
+          break;
+
+        case "faint":
+          ctx.fillText(`${wild_pokemon.who.name} fainted!`, 20, h - 100);
+          ctx.fillText(`${caught[current_pokemon].name} gained 1 experience point!`, 20, h - 65);
 
           if (last_stroke == 13) {
             if (caught[current_pokemon].exp >= 3 && caught[current_pokemon].evolution != -1) {
@@ -633,27 +675,52 @@ function battle() {
 
           if (last_stroke == 13) {
             evolutionTheme.pause();
+            last_stroke = -1;
             battle_text = "battle_done";
             flip = 0;
           }
           break;
 
-        case "loose":
+        case "lose":
           ctx.fillText(`${caught[current_pokemon].name} fainted! You ran away!`, 20, h - 100);
           if (last_stroke == 13) {
+            last_stroke = -1;
             battle_text = "battle_done";
           }
           break;
+
+        case "next":
+          ctx.fillText(`${caught[current_pokemon].name} fainted!`, 20, h - 100);
+          ctx.fillText(`Press enter to send out your next Pokémon!`, 20, h - 65);
+
+          if (last_stroke != -1) {
+            current_pokemon += 1;
+            champion_battle -= 1;
+            if (current_pokemon == 6) {
+              current_pokemon = 0;
+            }
+            last_stroke = -1;
+            battle_text = "choose";
+          }
+          break;
+
         case "battle_done":
+            text_case = "welcome";
+            if (champion_battle != -1) {
+              if (champion_battle != 0) {
+                text_case = "winner";
+              }
+              champion_battle = -1;
+            }
+            last_stroke = -1;
             caught[current_pokemon].hp = 100;
             in_battle = false;
             refreshIntervalId = setInterval(update, 500);
             clearInterval(refreshIntervalId_battle);
             battleTheme.pause();
             mainTheme.play();
-            wild_pokemon.generateWild();
-            text_case = "welcome"
             update();
+            wild_pokemon.generateWild();
           break;
 
         default:
@@ -894,20 +961,40 @@ function battle() {
         case "ready":
           ctx.fillText("This is the home of the champion... are you sure you're ready?", 10, h - 75);
           ctx.fillText("Press enter to challenge the champion or escape to wait.", 10, h - 55);
-             if (last_stroke == 27) {
-              text_case = "wlecome";
-            } else if (last_stroke == 13) {
+            if (last_stroke == 13) {
                 last_stroke = -1;
                 text_case = "champion";
-              }
+              } else if (last_stroke != -1) {
+                text_case = "welcome";
+              } 
           break;
 
         case "champion":
           ctx.fillText("LETS GO!", 10, h - 75);
-
           if (last_stroke != -1) {
-            text_case = "welcome";
+              in_battle = true;
+              clearInterval(refreshIntervalId);
+              refreshIntervalId_battle = setInterval(battle, 500);
+              mainTheme.pause();
+              battleTheme.play();
+              champion_battle = 5;
+              champion_current = 0;
+              battle_text = "choose";
+              last_stroke = -1;
+              let poke = pokemon_data[boss_names[champion_current]];
+              let new_pokemon = new Pokemon(boss_names[champion_current], poke["image"], poke["move1"], poke["move2"], poke["move3"], poke["move4"], poke["evolution"], 100);
+              wild_pokemon.who = new_pokemon;
+              battle();
+              text_case = "winner";
           }
+          break;
+
+        case "winner":
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          mainTheme.pause();
+          winnerAudio.play();
+          var winnerGIF = document.getElementById("winner");
+          winnerGIF.style.display = "block";
           break;
 
         default:
@@ -1026,10 +1113,20 @@ function sleep(milliseconds) {
 assetsLoaded()
 caught.push(wild_pokemon.who);
 wild_pokemon.generateWild();
-// caught.push(wild_pokemon.who);
-// caught.push(wild_pokemon.who);
-// caught.push(wild_pokemon.who);
-// caught.push(wild_pokemon.who);
+caught.push(wild_pokemon.who);
+wild_pokemon.generateWild();
+caught.push(wild_pokemon.who);
+wild_pokemon.generateWild();
+caught.push(wild_pokemon.who);
+wild_pokemon.generateWild();
+caught.push(wild_pokemon.who);
+wild_pokemon.generateWild();
+caught.push(wild_pokemon.who);
+wild_pokemon.generateWild();
+caught.push(wild_pokemon.who);
+caught.push(wild_pokemon.who);
+caught.push(wild_pokemon.who);
+caught.push(wild_pokemon.who);
 
 };
 
