@@ -977,10 +977,12 @@ function battle() {
    */
    var refreshIntervalId = 0;
    var refreshIntervalId_battle = 0;
+
   function assetsLoaded() {
       pokeball.generatePosition();
       wild_pokemon.generateWild();
       document.getElementById("loading").height = "0";
+      sleep(2000);
       refreshIntervalId = setInterval(update, 500);
       update();
   }
@@ -1013,9 +1015,17 @@ function battle() {
     }
   };
 
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 
-assetsLoaded();
+assetsLoaded()
 caught.push(wild_pokemon.who);
+wild_pokemon.generateWild();
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
