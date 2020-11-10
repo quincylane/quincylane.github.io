@@ -80,6 +80,12 @@ function move4() {
   document.dispatchEvent (evt); 
 }
 
+function showMenu() {
+  var menu = document.getElementById("phone_buttons");
+  menu.style.display = "block";
+}
+
+
 var in_battle = false;
 
 var pokemon_names = ['Jenna', 'Maddie', 'Hannah', 'Colton', 'Olivia', 'Julia', 'Anna', 'Leah', 'Schwetty', 'Ryan', 'Kyle', 'Holly', 'Angela', 'Chris', 'Anthony', 
