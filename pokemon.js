@@ -30,60 +30,59 @@ class Pokemon {
   }
 }
 
-
 // Buttons to Keyboard Strokes
 
-function moveenter() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':13, 'which':13}); 
-  document.dispatchEvent (evt); 
-}
+// function moveenter() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':13, 'which':13}); 
+//   document.dispatchEvent (evt); 
+// }
 
 
-function moveleft() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':37, 'which':37}); 
-  document.dispatchEvent (evt); 
-}
+// function moveleft() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':37, 'which':37}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function moveup() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':38, 'which':38}); 
-  document.dispatchEvent (evt); 
-}
+// function moveup() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':38, 'which':38}); 
+//   document.dispatchEvent (evt); 
+// }
 
 
-function moveright() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':39, 'which':39}); 
-  document.dispatchEvent (evt); 
-}
+// function moveright() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':39, 'which':39}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function movedown() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':40, 'which':40}); 
-  document.dispatchEvent (evt); 
-}
+// function movedown() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':40, 'which':40}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function move1() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':49, 'which':49}); 
-  document.dispatchEvent (evt); 
-}
+// function move1() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':49, 'which':49}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function move2() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':50, 'which':50}); 
-  document.dispatchEvent (evt); 
-}
+// function move2() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':50, 'which':50}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function move3() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':51, 'which':51}); 
-  document.dispatchEvent (evt); 
-}
+// function move3() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':51, 'which':51}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function move4() {
-  var evt = new KeyboardEvent('keydown', {'keyCode':52, 'which':52}); 
-  document.dispatchEvent (evt); 
-}
+// function move4() {
+//   var evt = new KeyboardEvent('keydown', {'keyCode':52, 'which':52}); 
+//   document.dispatchEvent (evt); 
+// }
 
-function showMenu() {
-  var menu = document.getElementById("phone_buttons");
-  menu.style.display = "block";
-}
+// function showMenu() {
+//   var menu = document.getElementById("phone_buttons");
+//   menu.style.display = "block";
+// }
 
 
 var in_battle = false;
@@ -151,14 +150,6 @@ var caught = [];
 var working = false;
 
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
-
 window.onload = function() {
   'use strict';
 
@@ -167,10 +158,10 @@ window.onload = function() {
 
   var w = document.getElementById('canvas').offsetWidth;
   var h = document.getElementById('canvas').offsetHeight;
-  var terrainImageLoaded = false,
-    houseImageLoaded = false,
-    pokeballImageLoaded = false,
-    playerImageLoaded = false;
+  var terrainImageLoaded = true,
+    houseImageLoaded = true,
+    pokeballImageLoaded = true,
+    playerImageLoaded = true;
   var objectSizes = 20;
   var speed = 100;
   var modifier = 100;
@@ -178,25 +169,17 @@ window.onload = function() {
 
   //terrain image
   var terrainImage = new Image();
-  terrainImage.onload = function() {
-    terrainImageLoaded = true;
-    assetsLoaded();
-  };
-  terrainImage.src = 'https://drive.google.com/uc?id=1o9rhnAr2GIilfjxPm4Wdl1BlaVP4Gsj1';
+  terrainImage.src = 'static/terrain.jpg';
 
   //house image
   var houseImage = new Image();
-  houseImage.onload = function() {
-    houseImageLoaded = true;
-    assetsLoaded();
-  };
-  houseImage.src = 'https://drive.google.com/uc?id=1YO5Mg6IzlskREYSRcr2Ut00JZI49ivnR';
+  houseImage.src = 'static/house.png';
 
   var battleImage = new Image();
   battleImage.src = "static/battle.jpg";
 
   //main sound
-  var mainTheme = new Audio('https://drive.google.com/uc?id=1ljrlJ1UBrH4YnIpxH02jqR_oJeLZhkDv');
+  var mainTheme = new Audio('static/main.mp3');
   mainTheme.loop = true;
   mainTheme.volume = .5;
 
@@ -210,7 +193,7 @@ window.onload = function() {
   evolutionTheme.volume = .5;
 
   //pokeball-selection
-  var pokePick = new Audio('https://drive.google.com/uc?id=1ULOY_JeGQWJ0SOcxQfBtNQ77e20sWa31');
+  var pokePick = new Audio('static/pickup.mp3');
   pokePick.volume = 0.8;
 
   //pokeball-selection
@@ -219,19 +202,12 @@ window.onload = function() {
 
   //player image
   var playerImage = new Image();
-  playerImage.onload = function() {
-    pokeballImageLoaded = true;
-    assetsLoaded();
-  };
-  playerImage.src = 'https://drive.google.com/uc?id=1ZsYCAWG7uR2_nZTVsIOOUog4tXFIUsgB';
+  playerImage.src = 'static/player.png';
 
   //pokeball image
   var pokeballImage = new Image();
-  pokeballImage.onload = function() {
-    playerImageLoaded = true;
-    assetsLoaded();
-  };
-  pokeballImage.src = 'https://drive.google.com/uc?id=1XiXaiRlytnRI2ncwnBWyyef79guxI55X';
+  pokeballImage.src = 'static/pokeball.png';
+
 
   /**
    * It will hold all the pockeball data like x and y axis position
@@ -482,7 +458,6 @@ var wild_pokemon = {
           last_stroke = -1;
       }
     }
-
     update();
   };
 
@@ -498,6 +473,7 @@ var opponent_strength = 0;
 var old_image = 0;
 var old_name = 0;
 var flip = 0;
+
 
 function battle() {
 
@@ -934,13 +910,6 @@ function battle() {
           }
           break;
 
-        case "battle_done":
-          text_case = "welcome";
-          ctx.fillText('Keep going, Trainer!', 10, h - 75);
-          wild_pokemon.generateWild();
-          sleep(2000);
-          break;
-
         default:
           break;
           // code block
@@ -1009,18 +978,11 @@ function battle() {
    var refreshIntervalId = 0;
    var refreshIntervalId_battle = 0;
   function assetsLoaded() {
-    if (
-      terrainImageLoaded == true &&
-      houseImageLoaded == true &&
-      pokeballImageLoaded == true &&
-      playerImageLoaded == true
-    ) {
       pokeball.generatePosition();
       wild_pokemon.generateWild();
       document.getElementById("loading").height = "0";
       refreshIntervalId = setInterval(update, 500);
       update();
-    }
   }
 
   /**
@@ -1052,6 +1014,7 @@ function battle() {
   };
 
 
+assetsLoaded();
 caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
