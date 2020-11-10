@@ -4,13 +4,11 @@
  * @author Panagiotis Vourtsis <vourtsis_pan@hotmail.com>
  */
 
-
  // SECTION 1: Variable Initialization
 
 class Pokemon {
   constructor(name, image_name, move1, move2, move3, move4, evolution, hp) {    
     this.name = name;
-
 
 
     this.tinyimage = new Image();
@@ -32,6 +30,55 @@ class Pokemon {
   }
 }
 
+
+// Buttons to Keyboard Strokes
+
+function moveenter() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':13, 'which':13}); 
+  document.dispatchEvent (evt); 
+}
+
+
+function moveleft() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':37, 'which':37}); 
+  document.dispatchEvent (evt); 
+}
+
+function moveup() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':38, 'which':38}); 
+  document.dispatchEvent (evt); 
+}
+
+
+function moveright() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':39, 'which':39}); 
+  document.dispatchEvent (evt); 
+}
+
+function movedown() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':40, 'which':40}); 
+  document.dispatchEvent (evt); 
+}
+
+function move1() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':49, 'which':49}); 
+  document.dispatchEvent (evt); 
+}
+
+function move2() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':50, 'which':50}); 
+  document.dispatchEvent (evt); 
+}
+
+function move3() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':51, 'which':51}); 
+  document.dispatchEvent (evt); 
+}
+
+function move4() {
+  var evt = new KeyboardEvent('keydown', {'keyCode':52, 'which':52}); 
+  document.dispatchEvent (evt); 
+}
 
 var in_battle = false;
 
@@ -1004,7 +1051,6 @@ caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
-
 
 };
 
