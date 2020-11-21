@@ -1366,18 +1366,18 @@ function sleep(milliseconds) {
 }
 
 assetsLoaded()
-caught.push(wild_pokemon.who);
-wild_pokemon.generateWild();
-caught.push(wild_pokemon.who);
-wild_pokemon.generateWild();
-caught.push(wild_pokemon.who);
-wild_pokemon.generateWild();
-caught.push(wild_pokemon.who);
-wild_pokemon.generateWild();
-caught.push(wild_pokemon.who);
-wild_pokemon.generateWild();
-caught.push(wild_pokemon.who);
-wild_pokemon.generateWild();
+// caught.push(wild_pokemon.who);
+// wild_pokemon.generateWild();
+// caught.push(wild_pokemon.who);
+// wild_pokemon.generateWild();
+// caught.push(wild_pokemon.who);
+// wild_pokemon.generateWild();
+// caught.push(wild_pokemon.who);
+// wild_pokemon.generateWild();
+// caught.push(wild_pokemon.who);
+// wild_pokemon.generateWild();
+// caught.push(wild_pokemon.who);
+// wild_pokemon.generateWild();
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
 // caught.push(wild_pokemon.who);
