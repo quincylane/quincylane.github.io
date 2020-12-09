@@ -1,9 +1,3 @@
-/**
- * Pokemon HTML5 canvas game
- * @version 1.0.0
- * @author Panagiotis Vourtsis <vourtsis_pan@hotmail.com>
- */
-
  // SECTION 1: Variable Initialization
 
 var wild_names = [
